@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="editor_styles.css">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">HTML Tutorial</a>
+    </header>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <textarea id="editor" class="form-control" rows="20">// Type your HTML code here</textarea>
+            </div>
+            <div class="col-md-6">
+                <iframe id="output" class="w-100" height="500px"></iframe>
+            </div>
+        </div>
+        <button class="btn btn-primary mt-2" onclick="runCode()">Run</button>
+    </div>
+    <script src="editor_script.js"></script>
+</body>
+</html>

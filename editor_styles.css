@@ -1,0 +1,7 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#editor {
+    font-size: var(--editor-font-size, medium);
+}

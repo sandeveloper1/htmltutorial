@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML HOME</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="index.html">HTML Tutorial</a>
+        <div class="ml-auto">
+            <a class="btn btn-outline-light mr-2" href="index.html">Home</a>
+            <a class="btn btn-outline-light" href="#">Topics</a>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container mt-5 pt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="mb-4">HTML HOME</h1>
+
+                    <section>
+                        <h2>Welcome to HTML</h2>
+                        <p>HTML stands for Hyper Text Markup Language. It is the standard language for creating web pages and web applications.</p>
+                        <p>HTML describes the structure of a web page, and it consists of a series of elements that define different parts of the content.</p>
+                    </section>
+
+                    <section>
+                        <h2>Example: Basic HTML Document</h2>
+                        <p>Below is an example of a basic HTML document structure:</p>
+                        <pre class="example-box"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a Heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        <button class="btn btn-primary try-it-btn" onclick="openEditor()">Try it yourself</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="row w-100">
+                <div class="col text-center border-right">
+                    <a class="btn btn-primary w-100" href="index.html">Previous</a>
+                </div>
+                <div class="col text-center border-right">
+                    <a class="btn btn-primary w-100" href="html_quiz_home.html">Quiz</a>
+                </div>
+                <div class="col text-center">
+                    <a class="btn btn-primary w-100" href="html_introduction.html">Next</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        function openEditor() {
+            const editorWindow = window.open("", "Code Editor", "width=800,height=600");
+            editorWindow.document.write(`
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>Code Editor</title>
+                    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+                </head>
+                <body>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <textarea id="editor" class="form-control" rows="20">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a Heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <iframe id="output" class="w-100" height="500px"></iframe>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mt-2" onclick="runCode()">Run</button>
+                    </div>
+                    <script>
+                        function runCode() {
+                            const code = document.getElementById('editor').value;
+                            const output = document.getElementById('output');
+                            output.srcdoc = code;
+                        }
+                    </script>
+                </body>
+                </html>
+            `);
+        }
+    </script>
+</body>
+</html>

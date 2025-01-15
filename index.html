@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">HTML Tutorial</a>
+        <div class="ml-auto">
+            <button class="btn btn-outline-light" id="settings-icon"><i class="fas fa-cog"></i></button>
+            <button class="btn btn-outline-light"><i class="fas fa-envelope"></i></button>
+            <button class="btn btn-outline-light"><i class="fas fa-share-alt"></i></button>
+        </div>
+    </header>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <img src="image.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Upgrade to Premium</h5>
+                        <p class="card-text">Get access to exclusive content and features.</p>
+                        <a href="#" class="btn btn-primary">Upgrade</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Open Code Editor</h5>
+                        <p class="card-text">Try out the examples in the integrated code editor.</p>
+                        <button class="btn btn-primary" onclick="openEditor()">Open Editor</button>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Join the Community</h5>
+                        <p class="card-text">Connect with other learners and share your knowledge.</p>
+                        <a href="#" class="btn btn-primary">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+        <a class="navbar-brand" href="#">Home</a>
+        <a class="navbar-brand" href="#">Topics</a>
+    </nav>
+    <div id="settings-menu" class="settings-menu">
+        <h5>Settings</h5>
+        <div>
+            <label for="dark-mode-switch">Dark Mode</label>
+            <input type="checkbox" id="dark-mode-switch">
+        </div>
+        <div>
+            <label for="font-size">Editor Font Size</label>
+            <select id="font-size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="x-large">Extra Large</option>
+            </select>
+        </div>
+        <button class="btn btn-primary mt-2" onclick="applySettings()">Apply</button>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
